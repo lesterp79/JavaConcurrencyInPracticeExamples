@@ -22,7 +22,7 @@ import net.jcip.annotations.ThreadSafe;
  * correctly.
  */
 @ThreadSafe public class ListHelperClient<E> {
-    public List<E> list = Collections.synchronizedList(new ArrayList<E>());
+    public final List<E> list = Collections.synchronizedList(new ArrayList<E>());
 
     public boolean putIfAbsent(E x) {
         synchronized (list) {

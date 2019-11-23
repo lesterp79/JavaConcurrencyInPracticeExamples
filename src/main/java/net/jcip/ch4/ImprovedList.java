@@ -50,142 +50,142 @@ import net.jcip.annotations.ThreadSafe;
     }
 
     @Override
-    public int size() {
+    public synchronized int size() {
         return list.size();
     }
 
     @Override
-    public boolean isEmpty() {
+    public synchronized boolean isEmpty() {
         return list.isEmpty();
     }
 
     @Override
-    public boolean contains(Object o) {
+    public synchronized  boolean contains(Object o) {
         return list.contains(o);
     }
 
     @Override
-    public Iterator<T> iterator() {
+    public synchronized Iterator<T> iterator() {
         return list.iterator();
     }
 
     @Override
-    public Object[] toArray() {
+    public synchronized Object[] toArray() {
         return list.toArray();
     }
 
     @Override
-    public <T1> T1[] toArray(T1[] a) {
+    public synchronized <T1> T1[] toArray(T1[] a) {
         return list.toArray(a);
     }
 
     @Override
-    public boolean add(T aT) {
+    public synchronized boolean add(T aT) {
         return list.add(aT);
     }
 
     @Override
-    public boolean remove(Object o) {
+    public synchronized boolean remove(Object o) {
         return list.remove(o);
     }
 
     @Override
-    public boolean containsAll(Collection<?> c) {
+    public synchronized boolean containsAll(Collection<?> c) {
         return list.containsAll(c);
     }
 
     @Override
-    public boolean addAll(Collection<? extends T> c) {
+    public synchronized boolean addAll(Collection<? extends T> c) {
         return list.addAll(c);
     }
 
     @Override
-    public boolean addAll(int index, Collection<? extends T> c) {
+    public synchronized boolean addAll(int index, Collection<? extends T> c) {
         return list.addAll(index, c);
     }
 
     @Override
-    public boolean removeAll(Collection<?> c) {
+    public synchronized boolean removeAll(Collection<?> c) {
         return list.removeAll(c);
     }
 
     @Override
-    public boolean retainAll(Collection<?> c) {
+    public synchronized boolean retainAll(Collection<?> c) {
         return list.retainAll(c);
     }
 
     @Override
-    public void replaceAll(UnaryOperator<T> operator) {
+    public synchronized void replaceAll(UnaryOperator<T> operator) {
         list.replaceAll(operator);
     }
 
     @Override
-    public void sort(Comparator<? super T> c) {
+    public synchronized void sort(Comparator<? super T> c) {
         list.sort(c);
     }
 
     @Override
-    public void clear() {
+    public synchronized void clear() {
         list.clear();
     }
 
     @Override
-    public boolean equals(Object o) {
+    public synchronized boolean equals(Object o) {
         return list.equals(o);
     }
 
     @Override
-    public int hashCode() {
+    public synchronized int hashCode() {
         return list.hashCode();
     }
 
     @Override
-    public T get(int index) {
+    public synchronized T get(int index) {
         return list.get(index);
     }
 
     @Override
-    public T set(int index, T element) {
+    public synchronized T set(int index, T element) {
         return list.set(index, element);
     }
 
     @Override
-    public void add(int index, T element) {
+    public synchronized void add(int index, T element) {
         list.add(index, element);
     }
 
     @Override
-    public T remove(int index) {
+    public synchronized T remove(int index) {
         return list.remove(index);
     }
 
     @Override
-    public int indexOf(Object o) {
+    public synchronized int indexOf(Object o) {
         return list.indexOf(o);
     }
 
     @Override
-    public int lastIndexOf(Object o) {
+    public synchronized int lastIndexOf(Object o) {
         return list.lastIndexOf(o);
     }
 
     @Override
-    public ListIterator<T> listIterator() {
+    public synchronized ListIterator<T> listIterator() {
         return list.listIterator();
     }
 
     @Override
-    public ListIterator<T> listIterator(int index) {
+    public synchronized ListIterator<T> listIterator(int index) {
         return list.listIterator(index);
     }
 
     @Override
-    public List<T> subList(int fromIndex, int toIndex) {
+    public synchronized List<T> subList(int fromIndex, int toIndex) {
         return list.subList(fromIndex, toIndex);
     }
 
     @Override
-    public Spliterator<T> spliterator() {
+    public synchronized Spliterator<T> spliterator() {
         return list.spliterator();
     }
 }
